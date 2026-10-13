@@ -274,7 +274,7 @@ const App = () => {
 
               <div className="score-block">
                 <div className="score">{totalCount + count}</div>
-                <p className="score-label">Tap the sun</p>
+                <p className="score-label">Tap to rack up points</p>
                 <p className="limit">
                   {Math.floor(displayDiff)} / {countLimit}
                 </p>
@@ -293,7 +293,7 @@ const App = () => {
                 >
                   2× taps
                 </button>
-                <button className="btn btn-board">🏆 Board</button>
+                {/* <button className="btn btn-board">🏆 Board</button> */}
               </footer>
             </main>
           )}

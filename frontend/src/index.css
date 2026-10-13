@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background: #000;
+  background: #020a0c;
   font-family:
     "Segoe UI",
     system-ui,
@@ -30,8 +30,8 @@ body {
   flex-direction: column;
   border-radius: 36px;
   overflow: hidden;
-  border: 1px solid #1f2326;
-  background: linear-gradient(180deg, #2b0f54 0%, #1a0836 45%, #12031c 100%);
+  border: 1px solid #14302f;
+  background: linear-gradient(180deg, #0b4f4a 0%, #07343a 45%, #031a20 100%);
   color: #fff;
 }
 
@@ -41,7 +41,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 18px 20px;
-  background: #0b0f10;
+  background: #041214;
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -51,15 +51,15 @@ body {
   font-weight: 700;
 }
 
-.auth{
+.auth {
   display: flex;
   gap: 10px;
 }
 
 .badge {
   border: none;
-  background: #facc15;
-  color: #3a2c00;
+  background: #ff7a59;
+  color: #3b1308;
   font-size: 12px;
   font-weight: 700;
   letter-spacing: 0.3px;
@@ -111,7 +111,7 @@ body {
   opacity: 0.6;
 }
 
-/* Sun button */
+/* Main round button */
 .sun-wrap {
   flex: 1;
   display: flex;
@@ -124,8 +124,8 @@ body {
   width: 286px;
   height: 286px;
   border-radius: 50%;
-  border: 10px solid #fde68a;
-  background: #f59e0b; /* crescent shade */
+  border: 10px solid #ffd2c2;
+  background: #e0502e; /* crescent shade */
   overflow: hidden;
   cursor: pointer;
   padding: 0;
@@ -140,26 +140,26 @@ body {
   cursor: not-allowed;
 }
 
-/* bright yellow disc (offset to leave the crescent on the left) */
+/* main coral disc (offset to leave the crescent on the left) */
 .sun::before {
   content: "";
   position: absolute;
   width: 235px;
   height: 235px;
   border-radius: 50%;
-  background: #facc15;
+  background: #ff7a59;
   top: -8px;
   left: 40px;
 }
 
-/* cream highlight */
+/* soft highlight */
 .sun::after {
   content: "";
   position: absolute;
   width: 58px;
   height: 58px;
   border-radius: 50%;
-  background: #fffbeb;
+  background: #fff1ec;
   top: 70px;
   left: 128px;
 }
@@ -171,7 +171,7 @@ body {
   margin-top: 40px;
   font-size: 28px;
   font-weight: 500;
-  color: #111;
+  color: #1a0a05;
 }
 
 /* Bottom buttons */
@@ -188,18 +188,18 @@ body {
   border-radius: 999px;
   font-size: 18px;
   font-weight: 600;
-  color: #111;
+  color: #0a1f1f;
   cursor: pointer;
 }
 
 .btn-boost {
-  background: #e9c8ff;
+  background: #8ff0dc;
 }
 .btn-boost.active {
-  box-shadow: 0 0 0 3px #facc15;
+  box-shadow: 0 0 0 3px #ff7a59;
 }
 .btn-board {
-  background: #f0f0f0;
+  background: #e6f4f2;
 }
 
 /* Sign-up */
@@ -225,19 +225,19 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .signup-input:focus {
-  border-color: #facc15;
+  border-color: #ff7a59;
 }
 
 .btn-primary {
   flex: none;
-  background: #facc15;
+  background: #ff7a59;
   width: 200px;
   margin: 10px auto;
 }
 
 .error-message {
   text-align: center;
-  color: red;
+  color: #ff8a8a;
   width: 200px;
   margin: 0 auto;
   padding: 10px;
