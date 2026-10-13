@@ -5,9 +5,9 @@ const url = import.meta.env.VITE_API_URL;
 
 const App = () => {
   const countLimit = 5000;
-  const idleDelay = 1000; 
-  const regenTickMs = 100; 
-  const regenStep = countLimit / 600; // full refill in ~60s
+  const idleDelay = 1000; // ms of no tapping before saving + refilling starts
+  const regenTickMs = 100; // how often the display refills
+  const regenStep = countLimit / 6000; // full refill in ~60s
 
   const [userName, setUserName] = useState("");
   const [password, setPassword] = useState("");
