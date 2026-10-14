@@ -1,6 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import axios from "axios";
-import "./src/Admin.css"
+import "./Admin.css"
 
 const url = import.meta.env.VITE_API_URL;
 
