@@ -17,7 +17,7 @@ const Tapgame = () => {
     const stored = JSON.parse(localStorage.getItem("loggedPlayer"));
     return stored?.totalCount ?? 0;
   });
-  const [is2x, setIs2x] = useState(false);
+  const [is5x, setIs5x] = useState(false);
   const [creatingAcct, setCreatingAcct] = useState(false);
   const [isGameOpen, setIsGameOpen] = useState(false);
   const [loggedPlayer, setLoggedPlayer] = useState(
@@ -173,7 +173,7 @@ const Tapgame = () => {
     clearTimeout(idleTimer.current);
     clearInterval(regenTimer.current);
 
-    const increment = is2x ? 2 : 1;
+    const increment = is5x ? 5 : 1;
     const available = Math.floor(energyRef.current);
     const gained = Math.min(increment, available);
 
@@ -183,13 +183,11 @@ const Tapgame = () => {
     setDisplayDiff(energyRef.current);
 
     if (energyRef.current <= 0) {
-      // out of energy: save now, lock the button, refill
-      setIs2x(false);
+      setIs5x(false);
       setRecharging(true);
       bank();
       startRegen();
     } else {
-      // user stopped tapping: save and start refilling
       idleTimer.current = setTimeout(() => {
         bank();
         startRegen();
@@ -288,12 +286,12 @@ const Tapgame = () => {
 
               <footer className="actions">
                 <button
-                  className={`btn btn-boost ${is2x ? "active" : ""}`}
-                  onClick={() => setIs2x(!is2x)}
+                  className={`btn btn-boost ${is5x ? "active" : ""}`}
+                  onClick={() => setIs5x(!is5x)}
                 >
-                  2× taps
+                  5× taps
                 </button>
-                {/* <button className="btn btn-board">🏆 Board</button> */}
+                
               </footer>
             </main>
           )}

@@ -28,6 +28,23 @@ const Admin = () => {
     renderAllUsers();
   }, []);
 
+async function deleteUser(id) {
+  if (!id) {
+    console.error("No player id");
+    return;
+  }
+  if (!window.confirm("Delete this player?")) return;
+
+  try {
+    await axios.delete(`${url}/player/${id}`);
+    setAllPlayers((prev) => prev.filter((p) => p._id !== id));
+  } catch (err) {
+    console.error(err.message);
+    setError("Could not delete player.");
+  }
+}
+
+
   const totalPoints = allPlayers.reduce(
     (sum, player) => sum + (player.totalCount || 0),
     0
@@ -101,6 +118,7 @@ const Admin = () => {
                 <span className="player-points">
                   {player.totalCount} <small>pts</small>
                 </span>
+                <button className="admin-refresh" onClick={() => deleteUser(player._id)}>Delete</button>
               </div>
             ))}
         </div>
